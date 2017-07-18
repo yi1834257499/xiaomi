@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<style type="text/css">
+			body{
+				background-image: url(img/QQ图片20170426171007.jpg);
+			}
+			form{
+				border: 0px solid red;
+				width: 600px;
+				height: 500px;
+				position: absolute;
+				left: 200px;
+				top: 200px;
+				text-align: center;
+				/*background-color:cornflowerblue;*/
+			}
+			.t_t1,.t_t2,.t_t3,.t_t4{
+				font-size: 20px;
+				padding: 20px;
+				margin-top: 20px;
+				color: #000000;
+				width: 400px;
+				font-size: 15px;
+				
+			}
+			.t_da{
+				border: 0px solid #0F0F0F;
+				height: 600px;
+				width: 700px;
+				position: absolute;
+				left: 450px;
+				top: 150px;
+			}
+			.t5{
+				border: 1px solid black;
+			}
+			.t5:hover{
+				cursor: pointer;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="t_da"></div>
+		<form onkeydown="if(event.keyCode==13)return false;" action="http://192.168.2.40/webWork/addData.php" method="get" id="t_you1" style="margin-top: 10px;">
+				<div class="t_t1">
+					任务等级:
+					<input class="t1" type="text" name="dengji" placeholder="请输入“紧急”或“普通”" maxlength="6" style="width: 200px;border: 1px purple solid;"/>
+				</div>
+				<div class="t_t2">
+					任务名称:
+					<input class="t2" type="text" name="rw_name" placeholder="请输入包含中文的名称" style="width: 200px;border: 1px purple solid;"/>
+				</div>
+				<div class="t_t3">
+					时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:
+					<input class="t3" type="text" name="time" placeholder="请输入正确的年-月-日" style="width: 200px;border: 1px purple solid;"/>
+				</div>
+				<div class="t_t4">
+					负&nbsp;&nbsp;责&nbsp;&nbsp;人:
+					<input class="t4" type="text" name="user" placeholder="请输入负责人名称" style="width: 200px;border: 1px purple solid;"/>
+				</div>
+				<input class="t5" type="submit" value="添加" style=""/>
+			</form>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#fhsag").removeAttr("disabled");
+			var mun = 0;
+			var ss =0;
+			$(".t1").blur(function(){
+				ss = 1;
+				if($(this).val()== "紧急"||$(this).val()== "普通"){
+				    return true;
+				}else{
+					$(this).val("");
+					$(this).attr("placeholder","请输入“紧急”或“普通");
+					mun += 1;
+				}
+			});
+			$(".t2").blur(function(){
+				var zhwem = /^[\u4e00-\u9fa5]{0,20}$/;
+				var t2v = $(this).val();
+				ss = 1;
+				if(!zhwem.test(t2v)){
+					$(this).val("");
+					$(this).attr("placeholder","请输入包含中文的名称");
+					mun += 1;
+				}
+			});
+			$(".t3").blur(function(){
+				var shijian = /^((((19|20)\d{2})-(0?[13-9]|1[012])-(0?[1-9]|[12]\d|30))|(((19|20)\d{2})-(0?[13578]|1[02])-31)|(((19|20)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|((((19|20)([13579][26]|[2468][048]|0[48]))|(2000))-0?2-29))$/;
+				var t3v =  $(".t3").val();
+				ss = 1;
+				if(shijian.test(t3v)){
+					return true;
+				}else{
+					$(this).val("");
+					$(this).attr("placeholder","请输入正确的年-月-日");
+					mun += 1;
+				}
+			});
+			$(".t4").blur(function(){
+				ss = 1;
+				var chang = /^[A-Za-z\u4e00-\u9fa5]{0,10}$/;
+				var t4v = $(".t4").val();
+				if(chang.test(t4v)){
+					return true;
+				}else{
+					$(this).val("");
+					$(this).attr("placeholder","请输入正确负责人名称");
+					mun += 1;
+				}
+			});
+			$("body"). mousemove(function(){
+//	
+				if(mun==0 && ss==1){
+					$(".t5").removeAttr("disabled");
+					mun=0;
+					ss=1;
+				}else{
+					$(".t5").attr("disabled","disabled");
+					mun = 0;
+					ss = 0;
+				}
+			})
+			
+		})
+	</script>
+</html>

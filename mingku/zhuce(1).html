@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a {
+				text-decoration: none;
+				color: rgb(116, 116, 116);
+			}
+			/*@font-face {
+				font-family: "xx";
+				src: url(YGYXSZITI2.0.TTF);
+			}
+			
+			body {
+				font-family: "xx" !important;
+				font-size: 30px;
+				color: rgb(255, 103, 0);
+			}*/
+			
+			#logo {
+				width: 49px;
+				height: 48px;
+				position: relative;
+				margin: auto;
+				top: 94px;
+			}
+			
+			div {
+				line-height: 40px;
+			}
+			
+			#zc {
+				/*position: relative;*/
+				width: 803px;
+				top: 200px;
+				border: 1px red solid;
+				margin: auto;
+			}
+			
+			#zc1 {
+				position: relative;
+				top: 150px;
+				width: 303px;
+				margin: auto;
+			}
+			
+			.sss {
+				width: 300px;
+				height: 30px;
+				border-color: gainsboro;
+				border: 1px gainsboro solid;
+				color
+			}
+			
+			.val {
+				size: 500px;
+				height: 40px;
+				width: 305px;
+				margin-top: 10px;
+				background-color: rgb(116, 116, 116);
+			}
+			
+			.ff {
+				position: relative;
+				float: left;
+				font-size: 10px;
+				margin-left: 10px;
+				left: 55px;
+				color: rgb(116, 116, 116);
+			}
+			
+			#foot {
+				position: relative;
+				width: 330px;
+				margin: auto;
+				height: 45px;
+				top: 100px;
+			}
+			
+			.gg {
+				position: relative;
+				width: 630px;
+				margin-left: -125px;
+			}
+			
+			#xz {
+				position: relative;
+				float: left;
+			}
+			
+			#pd {
+				position: absolute;
+				top: 40px;
+				right: -50px;
+				font-size: 14px;
+			}
+			
+			#pd1 {
+				position: absolute;
+				top: 120px;
+				right: -50px;
+				font-size: 14px;
+			}
+			
+			#pd2 {
+				position: absolute;
+				top: 200px;
+				right: -50px;
+				font-size: 14px;
+			}
+			
+			span a {
+				color: black;
+			}
+			
+			.tishi {
+				display: none;
+			}
+			
+			.success {
+				color: lawngreen;
+			}
+			
+			.error {
+				color: red;
+			}
+			
+			.b1 {
+				position: relative;
+				margin: auto;
+				top: 134px;
+				font-size: 30px;
+				width: 240px;
+				text-align: center;
+				/*left: 500px;*/
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="logo" style="background-image:url(img/milogo.png)"> </div>
+		<div class="b1">注册小米帐号</div>
+		<div id="zc1">
+			<form  name="zhuce">
+				<span>账号</span>
+				<div>
+					<input type="text" class="sss" id="i1" name="username" placeholder="请输入6-16位账号并以小写字母开头" />
+					<div id="pd">
+						<span id="userS" class="tishi success">通过✔</span>
+						<span id="userE" class="tishi error">重试✘</span>
+					</div>
+				</div>
+
+				密码
+				<div>
+					<input type="password" class="sss" id="i2" name="password" placeholder="请输入您6-16位密码" />
+					<div id="pd1">
+						<span id="userA" class="tishi success">通过✔</span>
+						<span id="userB" class="tishi error">重试✘</span>
+					</div>
+				</div>
+				邮箱
+				<div>
+					<input type="text" class="sss" name="email" id="i3" placeholder="请输入您的个人邮箱" />
+					<div id="pd2">
+						<span id="EA" class="tishi success">通过✔</span>
+						<span id="EB" class="tishi error">重试✘</span>
+					</div>
+				</div>
+				<div><input type="button" id="dd" class="val"  value="立即注册" name="zhuC" style="background-color:#FF6700;color: white;border-width: 1px;border-color: orange;" /></div>
+				<span style="font-size: 10px;color: rgb(116,116,116);">
+						点击“立即注册”，即表示您同意并愿意遵守小米<a href=""> <b>用户协议</b></a> 和<a href=""><b>隐私政策</b></a>
+					</span>
+
+			</form>
+
+			<div id="foot">
+				<div id="fo1">
+					<div class="ff wz">
+						<a href="" style="color: black;">简体</a>
+					</div>
+					<div class="ff wz">|</div>
+					<div class="ff wz sx">
+						<a href="">繁体</a>
+					</div>
+					<div class="ff wz">|</div>
+					<div class="ff wz sx">
+						<a href="">English</a>
+					</div>
+					<div class="ff wz">|</div>
+					<div class="ff wz sx">
+						<a href="">常见问题</a>
+					</div>
+				</div>
+				<div class="ff gg">小米公司版权所有-京ICP备10046444-<img src="img/ghs.png" />
+					<a href="">京公网安备11010802020134号</a>-京ICP证110507号</div>
+			</div>
+
+	</body>
+	<script type="text/javascript" src="img/jquery-1.7.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+		var form = document.forms["zhuce"];
+		var user = form["username"];
+		var yy = "";
+		console.log(user);
+		var a1="";
+		var sum=0;
+		$("#i1").blur(function cc(evt) {
+			var s = document.getElementById("userS");
+			var e = document.getElementById("userE");
+			var reg = /^[a-z]{1}[a-zA-Z0-9_]{5,15}$/;
+			var val = evt.target.value;
+			e.style.display = "none";
+			s.style.display = "none";
+			if(reg.test(val)) {
+				s.style.display = "block";
+				a1="1";
+
+			} else {
+				sum++;
+				e.style.display = "block";
+				a1="2";
+				$("#a3").css("border-color","orangered");
+		
+			}
+			yy = val;
+		})
+		var a2="";
+		var ps = "";
+		$("#i2").blur(function bb(evt) {
+			var p = document.getElementById("userA");
+			var a = document.getElementById("userB");
+			var reg = /[a-zA-Z]+/;
+			var reg1 = /[0-9]+/;
+			var val = evt.target.value;
+			p.style.display  = "none";
+			a.style.display = "none";
+			if(reg.test(val) && reg1.test(val) && val.length >= 6 && val.length <= 16) {
+				p.style.display = "block";
+				a2="1";
+			} else {
+				a.style.display = "block";
+				a2="2";
+				sum++;
+				$("#a2").css("border-color","orangered");
+			
+			}
+			ps = val;
+		})
+		var a3="";
+		$("#i3").blur(function aa(evt) {
+			var t = document.getElementById("EA");
+			var w = document.getElementById("EB");
+			var val = evt.target.value;
+			t.style.display = "none";
+			w.style.display = "none";
+			var reg = /^[0-9A-Za-z_]{5,16}@qq.com$/;
+			if(reg.test(val)) {
+				t.style.display = "block";
+
+				a3="1";
+			} else {
+				w.style.display = "block";
+				a3="2";
+				sum++;
+				$("#a1").css("border-color","orangered");
+				
+			}
+			pp = val;
+
+		})
+		
+		
+		//
+		//		var zhuC = form["zhuC"];
+		//		zhuC.onclick = function() {
+		//			if(ps != "" && yy != "" && pp != "") {
+		//				form.submit();
+		//			} else {
+		//				alert("请输入完成后注册");
+		//			}
+		//		}
+
+		//		$.ajax({
+		//					url:"HTTP://192.168.2.54/webWork/zuCe.php",
+		//					type:"get",
+		//					data:{
+		//						username:user,
+		//						password:pass,
+		//						email:em
+		//					},
+		//					success:function(res){
+		//						var txt=res;
+		//						
+		//						if(txt=="注册成功"){
+		//							alert("注册成功");
+		//							setTimeout(function(){
+		//								window.location="http://127.0.0.1:8020/mingku/index.html";
+		//							},2000)
+		//						}
+		//						if(txt=="用户名已存在"){
+		//							$(".user").text("用户名已存在");
+		//							$(".user").css("display","block");
+		//						}
+		//					}
+		//				})
+		
+		
+			$("#dd").click(function(){
+//				alert(sum);
+				if(sum!=0){
+					alert("重新输入");
+					sum=0;
+				}else{
+				
+				var user=$("#i1").val();
+				var pass=$("#i2").val();
+				var em=$("#i3").val();
+					$.ajax({
+					url:"HTTP://192.168.2.40/webWork/zuCe.php",
+					type:"get",
+					data:{
+						username:user,
+						password:pass,
+						email:em
+					},
+					success:function(res){
+						var txt=res;
+						
+						if(txt=="注册成功"){
+							alert("注册成功");
+							setTimeout(function(){
+								window.location="http://127.0.0.1:8020/%E5%B0%8F%E7%B1%B3%E7%BB%88%E6%9E%81%E7%89%885.7/mingku/index.html";
+							},2000)
+						}
+						if(txt=="用户名已存在"){
+							alert("用户名已存在");
+						}
+					}
+				})
+			}
+			})
+		})
+	</script>
+
+</html>

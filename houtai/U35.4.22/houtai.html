@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+		<style type="text/css">
+			.t_ding{
+				border: 1px solid gray;
+				position: relative;
+				height: 60px;
+				background-color: slategray;
+			}
+			.t_zuo{
+				border: 0px solid red;
+				position: relative;
+				height: 730px;
+				width: 300px;
+				background-color: gainsboro;
+			}
+			.t_xia{
+				border: 0px solid red;
+				height: 730px;
+				position:absolute;
+				width: 1300px;
+				left: 300px;
+				float: right;
+				margin-top: -730px;
+				display: none;
+			}
+			.t_xiaaaa{
+				border: 0px solid red;
+				height: 730px;
+				/*position:absolute;*/
+				width: 1300px;
+				left: 300px;
+				float: right;
+				margin-top: -730px;
+				display: none;
+			}
+			#t_ding_3{
+				color:white;
+				/*position: absolute;*/
+				float: left;
+				margin-top: auto;
+				top: 0px;
+				font-size: 30px;
+				margin-left: -60px;
+			}
+			
+			#t_ding_4{
+				left: 1500px;
+				/*position: absolute;*/
+				float: left;
+				margin-top: auto;
+				top: 20%;
+			}
+			.t_zuo_1{
+				border: 0px solid blue;
+				width: 100%;
+				background-color: sienna;
+			}
+			#t_zuo1_1{
+				background-color: white;
+				border: 1px solid gray;
+			}
+			#t_zuo_2{
+				font-size: 20px;
+				border: 0px solid red;
+				width: 10%;
+				height: 100%;
+				
+			}
+			.t_zuo_dong{
+				text-align: right;
+			}
+			#t_zuo_1a{
+				border: 1px solid red;
+				width: 100%;
+				height: 50px;
+			}
+			.t_zuo_chang{
+				display: none;
+				color: #000000;
+				background-color: white;
+			}
+			.t_zuo_name{
+				width: 100%;
+				height: 50px;
+			}
+			#dropdownMenu1{
+				/*position: absolute;*/
+				left: -50px;
+				top: 20px;
+			}
+			.t_xia_1{
+				border: 1px solid gray;
+				position: relative;
+				padding: 5px;
+				font-size: 20px;
+				left: 18px;
+				background-color: cornflowerblue;
+			}
+			.zcjiemian{
+				display: block;
+				border: 0px solid red;
+				background-color: antiquewhite;
+				width: 400px;
+				height: 500px;
+				position: relative;
+				margin-top: -750px;
+				margin-left: 50%;
+				float: left;
+			}
+			.zcjiemian{
+				display: none;
+				font-size: 20px;
+			}
+			.t_zc{
+				font-size: 30px;
+				font-family: "微软雅黑";
+				text-align: center;
+			}
+			#t_tc{
+				left: 360px;
+				top: -40px;
+				background-color: antiquewhite;
+			}
+			.jiemian{
+				border: 0px solid red;
+				width: 300px;
+				height: 400px;
+				margin: auto;
+			}
+			#t_zuo_13{
+				width: 100%;
+				height: 35px;
+			}
+			#t_img,#t_img2,#t_ding_3,#t_img4{
+				left: 20px;
+				position: relative;
+			}
+			.t_xia2{
+				border: 0px solid red;
+				margin-left: 5px;
+				margin-right: 5px;
+				margin-top: 5px;
+				background-color: lightblue;
+			}
+			.t_tal{
+				border: 0px solid red;
+				/*position: absolute;*/
+				width: 99%;
+				height: 80%;
+				top: 85px;
+				left: 6px;;
+				margin: auto;
+				text-align: center;
+			}
+			.t_tal1{
+				border: 0px solid red;
+				/*position: absolute;*/
+				width: 99%;
+				height: 80%;
+				top: 85px;
+				left: 6px;;
+				margin: auto;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="">
+			<div class="t_ding">
+				<div class="t_ding_ye">
+					<span id="t_ding_1" class="">小米</span>
+					<span id="t_ding_2">任务管理系统</span>
+				</div>
+               <div class="btn-group" id="t_ding_4">
+               	    <div class="glyphicon glyphicon-user" id="t_ding_3"></div>	
+                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin <span class="caret"></span>
+                   </button>
+                      <ul class="dropdown-menu">
+                         <li id="zhuce"><a href="mingku/zhuce(1).html">注册</a></li>
+                         <li><a href="mingku/index.html">登录</a></li>
+                         <li><a href="小米终极版5.7/index.html">小米商城</a></li>
+                         <li><a href="#" id="Close" onClick="custom_close()">退出</a></li>
+                     </ul>
+               </div>
+			</div>
+			<div class="t_zuo" style="min-width: 200px;">
+				<div class="t_zuo_1" id="t_zuo1_1">
+					<input type="text" style="width: 85%;height: 40px;margin-left: auto;" />
+					<a class="glyphicon glyphicon-search" id="t_zuo_2"></a>
+				</div>
+				<div class="t_zuo_1"  id="t_zuo_dong0">
+				   <button style="width: 100%;height: 50px;background-color: cornflowerblue;" id="t_zuo_1shou">
+					<span class="glyphicon glyphicon-home"></span>
+					首页
+				   </button>
+				</div>
+				<div class="t_zuo_1">
+					
+					<div class="t_zuo_dong" id="t_zuo_dong1">
+						<button class="t_zuo_name" style="width: 100%;height: 50px;background-color: cornflowerblue;" id="t_zuoname1.0">
+							<span class="glyphicon glyphicon-th-list"></span>
+							人员管理
+							<span class="glyphicon glyphicon-chevron-right" id="t_img"></span>
+						</button>
+					</div>
+						<div class="t_zuo_chang" id="t_zuo_chang1">
+							<button style="width: 100%;" class="t_jiben" id="t_zuo_13">成员基本信息</button>
+							<button style="width: 100%;" class="t_xinxichaxun" id="t_zuo_13">信息查询</button>
+							<button style="width: 100%;" class="t_moxinguanli" id="t_zuo_13">模型管理</button>
+							<button style="width: 100%;" class="t_xitong" id="t_zuo_13">系统菜单管理</button>
+							<button style="width: 100%;" class="t_wangzhan" id="t_zuo_13">网站信息配置</button>
+						</div>
+				    </div>
+				    <div class="t_zuo_1">
+					
+					<div class="t_zuo_dong" id="t_zuo_dong2">
+						<button class="t_zuo_name1" style="width: 100%;height: 50px;background-color: cornflowerblue;">
+							<span class="glyphicon glyphicon-cog"></span>
+							系统基本配置
+							<span style="left: 9px;" class="glyphicon glyphicon-chevron-right" id="t_img2"></span>
+						</button>
+					</div>
+						<div class="t_zuo_chang" id="t_zuo_chang2">
+							<button style="width: 100%;" class="t_pizhi1" id="t_zuo_13">123</button>
+							<button style="width: 100%;" class="t_pizhi2" id="t_zuo_13">123</button>
+							<button style="width: 100%;" class="t_pizhi3" id="t_zuo_13">123</button>
+							<button style="width: 100%;" class="t_pizhi4" id="t_zuo_13">123</button>
+						</div>
+				    </div>
+				    <div class="t_zuo_1">
+					
+					<div class="t_zuo_dong" id="t_zuo_dong3">
+						<button class="t_zuo_name" style="width: 100%;height: 50px;background-color: cornflowerblue;">
+							<span class="glyphicon glyphicon-list-alt"></span>
+							任务管理
+							<span style="left: 23px;" class="glyphicon glyphicon-chevron-right" id="t_img3"></span>
+						</button>
+					</div>
+						<div class="t_zuo_chang" id="t_zuo_chang3">
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+						</div>
+				    </div>
+				    <div class="t_zuo_1">
+					
+					<div class="t_zuo_dong"  id="t_zuo_dong4">
+						<button class="t_zuo_name" style="width: 100%;height: 50px;background-color: cornflowerblue;">
+							<span class="glyphicon glyphicon-align-left"></span>
+							查询统计
+							<span class="glyphicon glyphicon-chevron-right" id="t_img4"></span>
+						</button>
+					</div>
+						<div class="t_zuo_chang" id="t_zuo_chang4">
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+							<button style="width: 100%;" id="t_zuo_13">123</button>
+						</div>
+				    </div>
+				
+			</div>
+			<div class="t_xia">
+				<div class="t_xia_1">任务管理</div>
+			
+	        <div class="t_xia2">
+				搜索任务:
+                   <button type="button">
+                                                 值班任务 <span class="caret"></span>
+                   </button>
+				&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value="关键字" />
+				<button>搜索</button>
+			</div>
+			<div class="t_tal">
+				<table border="1px">
+					<tr>
+						<td style="width: 100px;"><input type="checkbox" /></td>
+						<td style="width: 200px;">ID</td>
+						<td style="width: 240px;">任务等级</td>
+						<td style="width: 240px;">任务名称</td>
+						<td style="width: 200px;">时间</td>
+						<td style="width: 200px;">负责人</td>
+						<td style="width: 240px;">操作</td>
+					</tr>
+				</table>
+			</div>
+			
+   
+		</div>
+	</div>
+	 <!--<div class="btn" style="position: absolute;top:10px;border: 1px solid red;">
+				<span>10条/页</span>
+				<span>共100条</span>
+			    <span class="btn "><a href="#">首页</a></span>
+        	    <span class="btn"><a href="#">上一页</a></span>
+        	    <span class="btn"><a href="#">1</a></span>
+        	    <span class="btn"><a href="#">2</a></span>
+        	    <span class="btn"><a href="#">3</a></span>
+        	    <span class="btn"><a href="#">4</a></span>
+        	    <span class="btn"><a href="#">5</a></span>
+        	    <span class="btn"><a href="#">...</a></span>
+        	    <span class="btn"><a href="#">10</a></span>
+        	    <span class="btn"><a href="#">下一页</a></span>
+        	    <span class="btn"><a href="#">尾页</a></span>
+           </div>-->
+			
+			
+			<div class="t_xiaaaa">
+				<div class="t_xia_1">任务管理</div>
+			
+	        <div class="t_xia2">
+				搜索任务:
+                   <button type="button">
+                                                 值班任务 <span class="caret"></span>
+                   </button>
+				&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value="关键字" />
+				<button>搜索</button>
+				<button><a href="shujitianjia.html">添加</a></button>
+			</div>
+			<div class="t_tal1">
+				<table border="1px">
+					<tr>
+						<td style="width: 100px;"><input type="checkbox" /></td>
+						<td style="width: 200px;">ID</td>
+						<td style="width: 240px;">任务等级</td>
+						<td style="width: 240px;">任务名称</td>
+						<td style="width: 200px;">时间</td>
+						<td style="width: 200px;">负责人</td>
+						<td style="width: 240px;">操作</td>
+					</tr>
+				</table>
+				<div class="btn" style="margin-left: 0px;">
+				<span>10条/页</span>
+				<span>共100条</span>
+			    <span class="btn btn-default"><a href="#">首页</a></span>
+        	    <span class="btn btn-default"><a href="#">上一页</a></span>
+        	    <span class="btn btn-default"><a href="#">1</a></span>
+        	    <span class="btn btn-default"><a href="#">2</a></span>
+        	    <span class="btn btn-default"><a href="#">3</a></span>
+        	    <span class="btn btn-default"><a href="#">4</a></span>
+        	    <span class="btn btn-default"><a href="#">5</a></span>
+        	    <span class="btn btn-default"><a href="#">...</a></span>
+        	    <span class="btn btn-default"><a href="#">10</a></span>
+        	    <span class="btn btn-default"><a href="#">下一页</a></span>
+        	    <span class="btn btn-default"><a href="#">尾页</a></span>
+        		</div>
+			</div>
+			</div>
+
+			</div>
+				
+			    
+	</div>
+	
+	</body>
+	<script language="javascript">
+	function custom_close() {
+		if(confirm("您确定要关闭本页吗？")) {
+			window.opener = null;
+			window.open('', '_self');
+			window.close();
+		} else {
+			
+		}
+	}
+	
+	
+</script>
+	<script type="text/javascript" src="js/js1.10.js"></script>
+</html>
